@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OdontoPro
 
-## Getting Started
+> Plataforma SaaS para clínicas odontológicas: apresentação dos profissionais e painel de gestão.
 
-First, run the development server:
+## 🪥 Visão Geral
+
+O OdontoPro conecta pacientes aos profissionais da clínica. A landing page exibe a equipe com cards modernos e perfis detalhados, enquanto o painel oferece a área administrativa do negócio.
+
+## ✨ Funcionalidades
+
+- **Landing page pública** — apresentação da clínica com equipe de profissionais
+- **Perfil do profissional** — foto, área de atuação, descrição e redes sociais
+- **Lista de profissionais** — cards modernos com slider responsivo
+- **Painel (dashboard)** — layout com sidebar recolhível + menu de usuário
+- **Carregamento otimizado** — skeletons em todas as páginas com dados
+
+## 🛠️ Stack
+
+| Biblioteca | Versão | Uso |
+|---|---|---|
+| Next.js | 16.3.4 | Framework React (App Router) |
+| React | 19.2.8 | UI Library |
+| TypeScript | 5.x | Tipagem estática |
+| Tailwind CSS | 4.x | CSS-first config |
+| shadcn/ui | base-nova | Componentes UI (Base UI) |
+| Prisma | 7.10.0 | ORM + PostgreSQL (driver adapter) |
+| next-auth | 5.0.0-beta | Autenticação (instalado) |
+| Lucide React | 1.x | Ícones |
+
+## 🚀 Começando
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Instalar dependências
+pnpm install
+
+# Rodar em desenvolvimento
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estrutura
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+odontopro/
+├── app/
+│   ├── (public)/            # Rotas públicas (landing + profissionais)
+│   └── (painel)/            # Rotas autenticadas (dashboard)
+├── components/              # Componentes compartilhados
+│   └── ui/                  # shadcn/ui
+├── lib/                     # Utilitários + Prisma Client
+├── prisma/                  # Schema Prisma
+└── .opencode/               # Memória, skills e estrutura de páginas
+```
 
-## Learn More
+## 🧠 Memória do projeto
 
-To learn more about Next.js, take a look at the following resources:
+Regras e convenções em `.opencode/`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `.opencode/skills/odontopro-context/SKILL.md` — contexto do projeto
+- `.opencode/skills/ultra-modern-ui/SKILL.md` — regras de design
+- `.opencode/pages-structure.md` — estrutura de cada página/rota
