@@ -15,6 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { LoginMenu } from "./login-menu";
 
 const beneficios = [
   {
@@ -82,14 +83,7 @@ export default function ProfessionalsSheet({ session }: ProfessionalsSheetProps)
               </Button>
             </SheetClose>
           ) : (
-            <SheetClose
-              nativeButton={false}
-              render={<Link href="/login" />}>
-              <Button variant="outline" className="w-full md:hidden">
-                <LogIn className="size-4" />
-                Login
-              </Button>
-            </SheetClose>
+            <LoginMenu />
           )}
           <SheetClose
             render={<Button className="w-full">Quero fazer parte</Button>}
